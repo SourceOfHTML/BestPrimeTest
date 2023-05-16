@@ -17,7 +17,7 @@ class Program
         {
             input = Convert.ToInt64(Console.ReadLine());
 
-            if (input % 2 == 0 || input == 0 || input == 1 || input < 0)
+            if (input % 2 == 0 || input <= 1)
             {
                 Console.WriteLine("Sorry, invalid number, OR even number.");
             }

@@ -1,8 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace PrimeTest;
+﻿namespace PrimeTest;
 class Program
 {
     public static bool IsPrime;
@@ -137,7 +133,7 @@ class Program
                 long mod = (long)(Math.Pow(witness, defendant) % n);
                 for(int i = 1; i < powersOfTwo; i++)
                 {
-                    mod = (long) Math.Pow(mod, 2) % n;
+                    mod = (long) (mod*mod) % n;
                 }
                 if (mod == 1 || mod == n - 1)
                 {
